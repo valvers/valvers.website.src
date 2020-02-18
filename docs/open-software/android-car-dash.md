@@ -10,6 +10,8 @@ The Valvers Dash Project is an open hardware and open software project that impl
 network and an Android tablet. Developing for Android is simple, with the main development language being Java.
 The API’s for Android are pretty good. This page describes getting started with Android Development.
 
+<iframe width="640" height="480" src="https://www.youtube.com/embed/7tUn4TdwByc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Windows and Linux
 
 Download the Android ADT Bundle which includes the SDK, Eclipse and the API’s. Once downloaded unzip to a hard drive.
@@ -161,3 +163,4 @@ packet byte
 
 0x55 - start of packet
 ```
+

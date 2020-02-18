@@ -1,10 +1,4 @@
----
-permalink: /open-software/gcc/weak-function-attributes
-categories: open-software gcc
-layout: default
----
-
-# GCC Weak Function Attributes
+# Weak Function Attributes
 
 In GCC it’s possible to have weak and strong function attributes. Two strongly names functions cannot be present in
 code objects being linked. This would be an error produced by the linker – it doesn’t know how to resolve two symbols

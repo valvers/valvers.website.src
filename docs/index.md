@@ -25,7 +25,7 @@ web might be something interesting. Welcome!
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/img/denford-orac/DSCF6018.jpg" class="d-block w-100" alt="...">
+      <img src="/img/denford_orac_1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block bg-light text-dark">
         <a href="/denford-orac"><h5>Denford Orac CNC Lathe</h5></a>
         <p>I bought one of these and upgraded the electronics/control</p>

@@ -1,0 +1,68 @@
+# (c)2020 Brian Sidebotham <brian.sidebotham@gmail.com>
+# License: MIT
+
+site_name: valvers.com
+site_author: 'Brian Sidebotham'
+site_url: 'https://www.valvers.com'
+copyright: 'Copyright &copy; 2002-2020 Brian Sidebotham'
+
+repo_name: GitHub
+edit_uri: edit/master/docs
+repo_url: https://github.com/valvers/valvers.website.src
+
+google_analytics: ["UA-57476377-1", "valvers.com"]
+
+plugins:
+  - search
+  - git-committers:
+      repository: valvers/valvers.website.src
+      branch: master
+      token: GIT_API_TOKEN
+
+extra_css:
+    - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
+    - valvers-assets/extra.css
+
+extra_javascript:
+    - https://code.jquery.com/jquery-3.4.1.slim.min.js
+    - https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
+    - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js
+    - valvers-assets/extra.js
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+theme:
+    language: en
+    custom_dir: valvers-theme
+    name: material
+    favicon: 'img/favicon.png'
+    logo: 'img/logo.png'
+    highlightjs: true
+    hljs_languages:
+        - python
+        - rust
+        - yaml
+    palette:
+        primary: 'black'
+        accent: 'black'
+    feature:
+        tabs: true

@@ -53,6 +53,9 @@ fi
 
 rm -rf "${output_dir}"/*
 
+# Make sure the custom domain CNAME is in place for GitHub pages...
+echo -n "www.valvers.com" > ${output_dir}/CNAME
+
 echo "Installing site to ${output_dir}"
 mv "${scriptdir}"/site/* "${output_dir}"/
 

@@ -55,14 +55,15 @@ theme:
     custom_dir: valvers-theme
     name: material
     favicon: 'img/favicon.png'
-    logo: 'img/logo.png'
+    logo: 'https://avatars3.githubusercontent.com/u/5575236?v=4?size=32'
     highlightjs: true
     hljs_languages:
         - python
         - rust
         - yaml
     palette:
-        primary: 'black'
-        accent: 'black'
+        primary: Blue Grey
+        accent: Deep Orange
     feature:
         tabs: true
+

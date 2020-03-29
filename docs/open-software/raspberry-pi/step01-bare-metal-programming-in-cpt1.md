@@ -24,7 +24,6 @@ the process behind that.
 ## TODO
 
 - Why is a card 16MiB when we're not using anywhere near that?
--
 
 ## Compatibility
 

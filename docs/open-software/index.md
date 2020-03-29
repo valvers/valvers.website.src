@@ -1,9 +1,4 @@
----
-layout: default
-title:  "Open Software"
-categories: open-software
-permalink: /open-software
----
+# Open-Software
 
 The best type of software ofcourse...
 

@@ -126,3 +126,103 @@ affected throughout the CSS stack.
 
 ![](/img/webstacks/reactjs/getting-started-reactjs-sass-orange.png)
 
+## Creating a New Component
+
+In order to do something useful we want to create what's known as a component in
+ReactJS. Let's take the SVG logo and make it a component. Then we can look at doing
+something funky with it.
+
+Checkout git commit `8535c88` for this part of the tutorial.
+
+We add a new `components` directory to the source code so we have somewhere to
+dump our component source code. In a new file we create a new component called
+`Logo`.
+
+The following content is in `src/components/logo.js`. I'm sure you could do
+Typescript here too.
+
+```javascript
+import React from 'react';
+import logo from '../logo.svg';
+
+export default class Logo extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            style: {
+                transform: 'scale(1)'
+            }
+        }
+        this.handleMouseEnter = this.handleMouseEnter.bind(this)
+        this.handleMouseLeave = this.handleMouseLeave.bind(this)
+    }
+
+    handleMouseEnter(event) {
+        this.setState((state, props) => ({
+            style: {
+                transform: 'scale(1.5)'
+            }
+        }))
+    }
+
+    handleMouseLeave() {
+        this.setState((state, props) => ({
+            style: {
+                transform: 'scale(1)'
+            }
+        }))
+    }
+
+    render() {
+        return (
+            <img src={logo}
+                className="App-logo"
+                style = { this.state.style }
+                alt="logo"
+                onMouseLeave={this.handleMouseLeave}
+                onMouseEnter={this.handleMouseEnter} />
+        );
+    }
+}
+```
+
+This component imports `React` - so we can extend the `React.Component` class
+to create our component.
+
+It imports the Logo image as an SVG in exactly the same way as the original test
+React application does.
+
+Then, creates a new class by extending the `React.Component` base class - here
+we create a class constructor that first constructs the base class object
+(super) with the properties that have been passed in.
+
+After that we create a state object bound the class. This state object *must*
+only be altered through the react framework's `setState` function. This is so that
+rendering changes, which are required to happen on the server-side are does as
+efficiently as possible. If the render function makes use of state then the class
+knows that it needs to re-render itself and update the component's view.
+
+We have added in some event handling for this component. This nicely wraps up a
+HTML view object and it's related JavaScript support.
+
+All the callbacks do are change the scale of the SVG image when the mouse hovers.
+We could of course do this much more simply in pure CSS, but we're here to
+investigate how Bulma and React work and how they can work together. I'm very
+much learning as I go.
+
+The `render` function of the class returns the view. It makes use of the
+component's state. Using the state doesn't need to be wrapped in a get function,
+but setting the state *must* as we've already established be wrapped with the
+`setState` function.
+
+We can investigate that further later on. We simply return a single image element.
+Normally we'd wrap the contents returned in a container div. I just wanted the
+minimum possible here for now. From the render method, we *must* only have one
+outer element. Thus, if we want to return an image and a paragraph, that's fine -
+but both must be wrapped in a div or similar element as a container.
+
+If you're familiar with JavaScript then you'll be familiar with the `bind(this)`
+construct that's going on here. It's a little laborious, but it must be done for
+the event handlers to be bound to the class object and therefore be able to make
+use of `this` to reference the class object. Without these bind calls, the event
+handlers would have no knowledge of the class in which they're defined.

@@ -226,3 +226,7 @@ construct that's going on here. It's a little laborious, but it must be done for
 the event handlers to be bound to the class object and therefore be able to make
 use of `this` to reference the class object. Without these bind calls, the event
 handlers would have no knowledge of the class in which they're defined.
+
+When you run this commit, we get something like this:
+
+![](/img/webstacks/reactjs/getting-started-reactjs-logo-component.gif)

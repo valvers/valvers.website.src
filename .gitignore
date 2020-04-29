@@ -4,3 +4,4 @@
 site
 mkdocs.yml
 production-build.sh
+docs/src/**/*.h

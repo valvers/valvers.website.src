@@ -59,3 +59,6 @@ echo -n "www.valvers.com" > ${output_dir}/CNAME
 echo "Installing site to ${output_dir}"
 mv "${scriptdir}"/site/* "${output_dir}"/
 
+# Make sure we don't publish any source code to the website - don't bother
+# hosting that. All source code should be referenced through github
+rm -rf "${output_dir}"/src

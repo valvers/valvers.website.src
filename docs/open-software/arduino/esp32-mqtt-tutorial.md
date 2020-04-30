@@ -72,6 +72,8 @@ Our new code looks pretty straight forward:
 
 **110-esp-arduino-debug-output.ino**
 
+[110-esp-arduino-debug-output.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/110-esp-arduino-debug-output)
+
 ```c
 void setup() {
   // put your setup code here, to run once:
@@ -115,6 +117,7 @@ authority or have any CA we need to trust.
 
 **120-esp-arduino-wifi-connection.ino**
 
+[120-esp-arduino-wifi-connection.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/120-esp-arduino-wifi-connection)
 ```cpp
 #include <WiFiClientSecure.h>
 
@@ -175,6 +178,8 @@ Using a complete copy of a [sketch from the MQTT library](https://github.com/256
 means that we can get connected to an MQTT client that is provided as a test ground.
 
 **130-esp-arduino-mqtt-example-shiftr.io.ino**
+
+[130-esp-arduino-mqtt-example-shiftr.io.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/130-esp-arduino-mqtt-example-shiftr.io.ino)
 
 ```c
 // This example uses an ESP32 Development Board
@@ -495,7 +500,9 @@ Make sure to set the Core Debug Level setting to Warning or more verbosity so yo
 
 ![](/img/open-software/arduino/esp32-mqtt-tutorial/340-esp32-arduino-set-debug-logging-to-warning.png)
 
-[140-esp32-arduino-mqtt-connect-to-aws-iot.ino](/src/140-esp32-arduino-mqtt-connect-to-aws-iot.ino) is a new
+**140-esp32-arduino-mqtt-connect-to-aws-iot.ino**
+
+[140-esp32-arduino-mqtt-connect-to-aws-iot.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/140-esp32-arduino-mqtt-connect-to-aws-iot) is a new
 sketch that includes the AWS configuration data that we've collected while setting up our AWS IoT service.
 
 In order to use the sketch, you'll need to fill in your AWS IoT ATS endpoint and the Thing Certificate and Private Key that you gathered earlier. If you've used all the same values as me you can leave the rest alone, otherwise you'll have to adjust the topic and/or device name.

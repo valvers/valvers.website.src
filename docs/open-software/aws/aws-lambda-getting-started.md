@@ -12,7 +12,7 @@ Conditions could be a queue entering a message queue, or a certain time is reach
 
 Sign into AWS and select the Lambda server (Using the Find Services search function)
 
-![](/images/open-software/aws/arm-lambda-getting-started/100-lambda-frontscreen.png)
+![](/img/open-software/aws/arm-lambda-getting-started/100-lambda-frontscreen.png)
 
 Click **Create Function**
 
@@ -22,7 +22,7 @@ Leave the runtime set to the latest Node.js (It's 12.x as of writing this tutori
 
 There's no need to do anything much with the execution role. If you expand the options you'll see that the default action is to create a new role with basic Lambda permissions. This is ideal as we don't want the Lambda to have permissions to do anything inside our account right now.
 
-![](/images/open-software/aws/arm-lambda-getting-started/110-lambda-create.png)
+![](/img/open-software/aws/arm-lambda-getting-started/110-lambda-create.png)
 
 Click **Create Function** to now go ahead and create the Lambda function.
 
@@ -53,35 +53,35 @@ We can go ahead and create an API Gateway and attach an API endpoint to the Lamb
 
 Switch to the API Gateway Service in the AWS Console and select HTTP API by clicking `Build` on the HTTP API dialog:
 
-![](/images/open-software/aws/arm-lambda-getting-started/120-api-gateway-http.png)
+![](/img/open-software/aws/arm-lambda-getting-started/120-api-gateway-http.png)
 
 Click `Add Integration` and select `Lambda` from the dropdown list to start integrating the API to the Lambda function.
 
-![](/images/open-software/aws/arm-lambda-getting-started/130-api-gateway-add-lambda.png)
+![](/img/open-software/aws/arm-lambda-getting-started/130-api-gateway-add-lambda.png)
 
 Leave the Integration Target as the default - it should match the Lambda Function you created at the start. Select the `awsLambdaTutorial` Lambda as the target.
 
-![](/images/open-software/aws/arm-lambda-getting-started/140-api-gateway-add-lambda-awslambdatutorial.png)
+![](/img/open-software/aws/arm-lambda-getting-started/140-api-gateway-add-lambda-awslambdatutorial.png)
 
 Give the API a name like `awsLambdaTutorial` and **click Next**:
 
-![](/images/open-software/aws/arm-lambda-getting-started/150-api-gateway-add-lambda-name.png)
+![](/img/open-software/aws/arm-lambda-getting-started/150-api-gateway-add-lambda-name.png)
 
 On the next page we can see that the roue `/awsLambdaTutorial` in the HTTP API will result in use running the target lambda. The Method by default is set to `ANY`. Might as well leave all of this as default - although we'll only be using the `GET` for the turorial.
 
-![](/images/open-software/aws/arm-lambda-getting-started/160-api-gateway-add-lambda-routes.png)
+![](/img/open-software/aws/arm-lambda-getting-started/160-api-gateway-add-lambda-routes.png)
 
 The Stages section can just be left as `$default` - we won't be doing any fancy API versioning for this tutorial. **Click Next**.
 
-![](/images/open-software/aws/arm-lambda-getting-started/170-api-gateway-add-lambda-stages.png)
+![](/img/open-software/aws/arm-lambda-getting-started/170-api-gateway-add-lambda-stages.png)
 
 In the review page, **click Create** to create the API Gateway.
 
-![](/images/open-software/aws/arm-lambda-getting-started/180-api-gateway-add-lambda-review.png)
+![](/img/open-software/aws/arm-lambda-getting-started/180-api-gateway-add-lambda-review.png)
 
 The next page gives us information about the API Gateway - it's live already and had a unique API Gateway URL which can be used straight away.
 
-![](/images/open-software/aws/arm-lambda-getting-started/190-api-gateway-add-lambda-create.png)
+![](/img/open-software/aws/arm-lambda-getting-started/190-api-gateway-add-lambda-create.png)
 
 Using the route from earlier in the process and the API URL shown after creation we can exercise the Lambda function using a HTTP call to the API e
 endpoint we connected to the Lambda:

@@ -12,17 +12,17 @@ Once installed, plug the ESP32 board into a USB port and start the Arduino IDE.
 
 Select `File->Preferences` and then enter `https://dl.espressif.com/dl/package_esp32_index.json` in the `Additional Board Manager URLs` field.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/110-wsp32-arduino-ide-set-preferences-to-enable-esp32.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/110-wsp32-arduino-ide-set-preferences-to-enable-esp32.png)
 
 **Click OK**
 
 Select `Tools->Board->Board Manager`
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/120-esp32-arduino-ide-select-board-manager.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/120-esp32-arduino-ide-select-board-manager.png)
 
 Using the search feature, **click Install** for the ESP32 board support.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/130-esp32-arduino-ide-install-esp32-boards.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/130-esp32-arduino-ide-install-esp32-boards.png)
 
 > **NOTE:** The ESP tools require the `pyserial` package to be installed in your default python installation.
 >  Depending on your system you can either use pip to install the pyserial package with something like
@@ -31,7 +31,7 @@ Using the search feature, **click Install** for the ESP32 board support.
 
 Select the board (depending on what board you have!). For me, I've been posted this board to work with:
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/TODO.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/TODO.png)
 
 I've selected the standard `ESP Dev Module` as when I select `Tools->Get Board Info` the board comes back as
 unknown and so cannot be automatically detected as a supported Arduino board.
@@ -41,7 +41,7 @@ in order to compile the sketch and upload the sketch to the ESP32 device.
 
 You should get a success message along the lines of `"Done uploading"` in the Arduino IDE.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/150-esp32-arduino-ide-done-uploading.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/150-esp32-arduino-ide-done-uploading.png)
 
 ## Debug Output
 
@@ -91,7 +91,7 @@ set to the same as your board communications so you get to see all of the output
 
 Now, when we Upload the sketch to the ESP32, we can see the `Hello World!` output.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/160-esp32-arduino-ide-serial-debug.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/160-esp32-arduino-ide-serial-debug.png)
 
 We're done getting set up with Arduino and our board
 
@@ -167,7 +167,7 @@ We can install a library in the Arduino IDE for the MQTT client to get us MQTT s
 
 In the Arduino IDE click `Tools->Manage Libraries...` and enter MQTT into the search box.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/170-esp32-arduino-ide-library-manager-mqtt.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/170-esp32-arduino-ide-library-manager-mqtt.png)
 
 **Click Install** to install the library. Make sure you use the `Joël Gähwiler` MQTT library.
 
@@ -270,23 +270,23 @@ information about MQTT, you can see the [MQTT 3.1.1 documentation](http://docs.o
 The AWS IoT service allows us to create secure MQTT endpoints for our own Internet-of-Things devices. Let's
 have a look at how to get our now-MQTT-enabled ESP32 connecting to our own AWS IoT service.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/200-esp32-aws-iot-getting-started.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/200-esp32-aws-iot-getting-started.png)
 
 The first task is to create a Thing - that is, a unique device that will be able to connect to the service
 that we create later.
 
 **Click Manage**
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/210-esp32-aws-iot-register-a-thing.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/210-esp32-aws-iot-register-a-thing.png)
 
 **Click Register a thing**
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/220-esp32-aws-iot-create-a-single-thing.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/220-esp32-aws-iot-create-a-single-thing.png)
 
 Name your thing something that is pertinent to this tutorial. I've gone for `ESP32Example` so that's what'll
 be in use throughout the rest of this tutorial.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/230-esp32-aws-iot-create-a-single-thing-name.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/230-esp32-aws-iot-create-a-single-thing-name.png)
 
 **Click Next** after you've inserted a name. There's no need to create a group or anything at this point.
 
@@ -295,7 +295,7 @@ tutorial, I say - use the one-click certificate creation. That's what I'll do he
 generally for business I'd be using a CSR or (more likely) my own CA for IoT devices. Using your own CA
 puts you in a much better place.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/240-esp32-aws-iot-create-a-single-thing-certificate.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/240-esp32-aws-iot-create-a-single-thing-certificate.png)
 
 **Click One-click certificate creation "Create certificate"**
 
@@ -303,7 +303,7 @@ Pay attention to the next page - you only get one chance to download the public 
 away from the next AWS page you will not be able to download them again. Make sure you keep the certificate and
 private key out of other people's reach.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/250-esp32-aws-iot-create-a-single-thing-certificate-download.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/250-esp32-aws-iot-create-a-single-thing-certificate-download.png)
 
 **Download all three certificates**
 
@@ -325,7 +325,7 @@ Download the AWS Root CA and keep it alongside the other certificates.
 In the original certificate page, **Click Activate** on the certificate, so that the box now changes to
 Deactivate. The certificates are now active.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/260-esp32-aws-iot-create-a-single-thing-certificate-activated.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/260-esp32-aws-iot-create-a-single-thing-certificate-activated.png)
 
 **Click Done**, because we cant' yet `Attach a policy` as we've not created any IoT policies yet.
 
@@ -337,7 +337,7 @@ sub-menu to start creating a new security policy which we will attach to the cer
 Together the policy and the certificate will give the new IoT thing permissions to do something (Usually
 subscribe to and publish to MQTT channels).
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/270-esp32-aws-iot-secure-create-a-policy.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/270-esp32-aws-iot-secure-create-a-policy.png)
 
 **Click Create a policy** which will be our first policy.
 
@@ -351,7 +351,7 @@ which includes a region and your account number.
 
 Set the Effect to `Allow`.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/285-esp32-aws-iot-secure-iot-connect-statement.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/285-esp32-aws-iot-secure-iot-connect-statement.png)
 
 
 Now - move to the advanced mode (**Click Advanced...**) - this allows us to paste in the JSON source for this policy. The reason for doing the first one is to
@@ -402,11 +402,11 @@ We now have to attach the Policy to the Certificate we created earlier for the I
 created a few steps ago for our first IoT Thing. Hover over it and click the checkbox on the certificate.
 From the `Actions` menu that appears, select `Attach Policy`
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/300-esp32-aws-iot-secure-iot-attach-policy-to-certificate.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/300-esp32-aws-iot-secure-iot-attach-policy-to-certificate.png)
 
 From the dialog that opens, select the new policy that we just created, `ESP32ExamplePermissions`:
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/310-esp32-aws-iot-secure-iot-attach-policy-to-certificate-attach.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/310-esp32-aws-iot-secure-iot-attach-policy-to-certificate-attach.png)
 
 **Click Attach** and we get a confirmation toast that the policy has been attached successfully.
 
@@ -415,11 +415,11 @@ Now that the security policy is attached to the certificate, we need to attach t
 From the Actions menu for the certificate which should still be available (If it isn't, select the certificate again as above)
 select `Attach thing`
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/300-esp32-aws-iot-secure-iot-attach-policy-to-certificate.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/300-esp32-aws-iot-secure-iot-attach-policy-to-certificate.png)
 
 From the dialog that opens, select the Thing that we created earlier.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/320-esp32-aws-iot-secure-iot-attach-certificate-to-thing.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/320-esp32-aws-iot-secure-iot-attach-certificate-to-thing.png)
 
 **Click Attach** and we get another toast message saying that the certificate was attached to the Thing successfully.
 
@@ -441,7 +441,7 @@ role and don't bother logging in as the root account any longer.
 In the AWS Console select the IAM service and click Users, following by the User which you currently use within the
 AWS Console. From the user summary page, click `Security Credentials` and then `Create access key`.
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/330-esp32-aws-iot-iam-user-access-key-create.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/330-esp32-aws-iot-iam-user-access-key-create.png)
 
 You need to click `Show` to be able to see the `Secret access key` and you need to put that somewhere safe. I
 recommend some secure password vault like Lastpass or else Hashicorp's Vault.
@@ -493,7 +493,7 @@ subscribe to and publish messages to the same topic.
 As things in the Sketch get more complicated, we want to make sure we see output from any libraries we're using.
 Make sure to set the Core Debug Level setting to Warning or more verbosity so you can debug issues more easily:
 
-![](/images/open-software/arduino/esp32-mqtt-tutorial/340-esp32-arduino-set-debug-logging-to-warning.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/340-esp32-arduino-set-debug-logging-to-warning.png)
 
 [140-esp32-arduino-mqtt-connect-to-aws-iot.ino](/src/140-esp32-arduino-mqtt-connect-to-aws-iot.ino) is a new
 sketch that includes the AWS configuration data that we've collected while setting up our AWS IoT service.

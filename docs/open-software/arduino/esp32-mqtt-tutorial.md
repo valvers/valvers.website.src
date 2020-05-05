@@ -72,7 +72,7 @@ Our new code looks pretty straight forward:
 
 **110-esp-arduino-debug-output.ino**
 
-[110-esp-arduino-debug-output.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/110-esp-arduino-debug-output)
+[110-esp-arduino-debug-output.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/110-esp32-arduino-debug-output)
 
 ```c
 void setup() {
@@ -117,7 +117,7 @@ authority or have any CA we need to trust.
 
 **120-esp-arduino-wifi-connection.ino**
 
-[120-esp-arduino-wifi-connection.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/120-esp-arduino-wifi-connection)
+[120-esp-arduino-wifi-connection.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/120-esp32-arduino-wifi-connection)
 ```cpp
 #include <WiFiClientSecure.h>
 
@@ -179,7 +179,7 @@ means that we can get connected to an MQTT client that is provided as a test gro
 
 **130-esp-arduino-mqtt-example-shiftr.io.ino**
 
-[130-esp-arduino-mqtt-example-shiftr.io.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/130-esp-arduino-mqtt-example-shiftr.io.ino)
+[130-esp-arduino-mqtt-example-shiftr.io.ino](https://github.com/valvers/valvers.website.src/tree/master/docs/src/esp32-mqtt-tutorial/130-esp32-arduino-mqtt-example-shiftr.io.ino)
 
 ```c
 // This example uses an ESP32 Development Board

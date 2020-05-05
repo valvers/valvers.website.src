@@ -10,6 +10,21 @@
   </div>
 </div>
 
+## Resources
+
+Some useful resources for the Denford Orac CNC Lathe:
+
+Denford themselves keep a set of scanned resources [available on their forums](http://www.denfordata.com/bb/viewtopic.php?f=43&t=400).
+
+Here's a copy of the [electrical diagrams I use](/dl/denford-orac/orac-mk3-electrical-drawings-small.pdf).
+
+| Name | Link |
+|------|------|
+| Electrical Diagrams | [/dl/denford-orac/orac-mk3-electrical-drawings-small.pdf](/dl/denford-orac/orac-mk3-electrical-drawings-small.pdf) |
+| Operation Manual | [/dl/denford-orac/orac-progamming-operating-and-maintenance.pdf](/dl/denford-orac/orac-progamming-operating-and-maintenance.pdf) |
+| Brochure | [/dl/denford-orac/orac-brochures-and-illustrated-parts-list.pdf](/dl/denford-orac/orac-brochures-and-illustrated-parts-list.pdf) |
+| Fitting a backplate instructions | [/dl/denford-orac/fitting-a-backplate.pdf](/dl/denford-orac/fitting-a-backplate.pdf) |
+
 ## 2013
 
 - [New Motor Fitted](/denford-orac/2013-03-13-new-motor-fitted)

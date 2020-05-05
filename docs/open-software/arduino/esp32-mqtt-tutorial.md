@@ -45,7 +45,8 @@ You should get a success message along the lines of `"Done uploading"` in the Ar
 
 ## Debug Output
 
-> If you're already familiar with Arduino and the IDE, etc. then you can safely skip this section.
+!!! tip
+    If you're already familiar with Arduino and the IDE, etc. then you can safely skip this section.
 
 To get started with the ESP (If you're not familiar with Sketches and Libraries) let's look at getting some
 debug output from the Sketch (Program) to prove to ourselves that the device is working and running our sketch.
@@ -261,7 +262,10 @@ void loop() {
 }
 ```
 
-> **NOTE:** I created a [GitHub issue](https://github.com/256dpi/arduino-mqtt/issues/197) for the fact that the example ESP32 code didn't work out-of-the box on an ESP32 development board
+!!! warning
+    I created a [GitHub issue](https://github.com/256dpi/arduino-mqtt/issues/197) for
+    the fact that the example ESP32 code didn't work out-of-the box on an ESP32
+    development board
 
 The above code is changed slightly from the actual example code. The buffer size for the MQTT client *must*
 be increased to get past the first message received from the shiftr.io MQTT server. After that first message,
@@ -270,7 +274,8 @@ information about MQTT, you can see the [MQTT 3.1.1 documentation](http://docs.o
 
 ## Amazon IoT
 
->**NOTE:** In this section, we'll make heavy use of the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/iot-gs.html)
+!!! tip
+    In this section, we'll make heavy use of the [AWS documentation](https://docs.aws.amazon.com/iot/latest/developerguide/iot-gs.html)
 
 The AWS IoT service allows us to create secure MQTT endpoints for our own Internet-of-Things devices. Let's
 have a look at how to get our now-MQTT-enabled ESP32 connecting to our own AWS IoT service.
@@ -437,7 +442,8 @@ sufficient permissions to `describe-endpoint`)
 
 #### Create IAM Access Key
 
->**NOTE**: You can skip this section if you've already got an AWS Access Key and the AWS CLI tools.
+!!! tip
+    You can skip this section if you've already got an AWS Access Key and the AWS CLI tools.
 
 We need to create an Access Key which will allow an IAM user to perform programatic tasks on our AWS account. If
 you're still using the root account credentials to do things - STOP! Change to make yourself an IAM administrator

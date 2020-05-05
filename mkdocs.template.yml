@@ -14,6 +14,8 @@ google_analytics: ["UA-57476377-1", "valvers.com"]
 
 plugins:
   - search
+  - minify:
+      minify_html: true
   - git-committers:
       repository: valvers/valvers.website.src
       branch: master
@@ -66,4 +68,3 @@ theme:
         accent: Deep Orange
     feature:
         tabs: true
-

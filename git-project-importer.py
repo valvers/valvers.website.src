@@ -40,8 +40,8 @@ for project in configuration['git-projects']:
             document = rf.read().decode('utf-8')
 
         # Get rid of any formatting differences, we just need \n for newlines
-        document.replace("\r", "")
-        document.replace("/images/", f"/img/{project['name']}/")
+        document = document.replace("\r", "")
+        document = document.replace("/images/", f"/img/{project['name']}/")
 
         with open(f"docs/{project['root']}/{project['name']}.md", "wb") as wf:
             wf.write(document.encode('utf-8'))
@@ -58,8 +58,8 @@ for project in configuration['git-projects']:
             document = rf.read().decode('utf-8')
 
         # Get rid of any formatting differences, we just need \n for newlines
-        document.replace("\r", "")
-        document.replace("/images/", f"/img/{project['name']}/")
+        document = document.replace("\r", "")
+        document = document.replace("/images/", f"/img/{project['name']}/")
 
         with open(f"docs/{project['root']}/{project['name']}-{f}.md", "wb") as wf:
             wf.write(document.encode('utf-8'))

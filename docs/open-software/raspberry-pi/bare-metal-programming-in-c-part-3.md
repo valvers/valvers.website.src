@@ -342,7 +342,7 @@ void kernel_main( unsigned int r0, unsigned int r1, unsigned int atags )
 The output is quite nifty as we get a fading ACK LED. Here is an example of it
 running on a pi-zero:
 
-![](/images/part-3-pizero-running-example.gif)
+![](/img/bare-metal-programming-in-c/part-3-pizero-running-example.gif)
 
 I think in the next tutorial part we'll introduce interrupts. The code in this
 tutorial is far from ideal. Function calls that wait half a second before

@@ -66,7 +66,7 @@ There is basically a mode per exception. As was mentioned previously we start at
 
 The next section of the Architecture Reference Manual describes the registers available. This is again, another important section. Look at Figure A2-1 (Register Organization) and you'll see something interesting...
 
-![ARMv5 Figure A2-1](/images/part-4-armv5-figure-a2-1-register-organization.png)
+![ARMv5 Figure A2-1](/img/bare-metal-programming-in-c/part-4-armv5-figure-a2-1-register-organization.png)
 
 As seen by the small icon and note at the bottom of the table, some of the registers are mode-specific. This can be useful, for example in the Fast Interrupt exception a lot of registers have been replaced by mode-specific registers. This means that we can use these registers without fear of altering the behaviour of code that was operating in User or Supervisor mode before the Fast Interrupt Exception occurred.
 
@@ -541,11 +541,11 @@ In armc-013-start.S:
 
  Section A2.5.6 describes the interrupt disable bits, and that gets us the last bit of information we need.
 
-![](/images/part-4-cpsr-armv7a-v7r.png)
+![](/img/bare-metal-programming-in-c/part-4-cpsr-armv7a-v7r.png)
 
  Section A4.1.38 MRS describes the Move Program Status Register to general purpose register instruction which is the special instruction referred to in Section A1.1.3 of the manual.
 
-![](/images/part-4-msr-instruction.png)
+![](/img/bare-metal-programming-in-c/part-4-msr-instruction.png)
 
  So, we copy the contents of the Current Program Status Register into R0.
 

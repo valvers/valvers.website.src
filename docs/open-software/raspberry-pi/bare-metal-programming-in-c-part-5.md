@@ -2,6 +2,8 @@
 
 Finally, we get on to a tutorial that moves us away from blinking an LED as we explore the VideoCore IV GPU
 
+> **NOTE:** This tutorial has not yet been migrated to **RPI4**!
+
 ## Reference Material
 
 We need some reading material for this tutorial - this is how I put the tutorial together, by reading and studying the manuals available for the Videcore, but for this tutorial mainly the information from the Cambridge Raspberry Pi Tutorials. Yes there's a lot of text and more than one manual - but that's the only way you learn!
@@ -22,7 +24,7 @@ The GPU and ARM devices can communicate with each other through a mailbox system
 A framebuffer is a term that really refers to a block of video memory. This video memory is used to display pixels on the screen. So we have access to each pixel on the screen and can change it's colour properties. The framebuffer should be at least as big as the screen resolution. The size of the framebuffer memory block is given by:
 
 ```c
-    framebuffer_bytes = pixels_x * pixels_y * bytes_per_pixel
+framebuffer_bytes = pixels_x * pixels_y * bytes_per_pixel
 ```
 
 > **NOTE** In this tutorial we'll be using a framebuffer and so won't have any higher-level functions like OpenGL or accelerated graphics. We're going to create a simple software renderer.
@@ -64,11 +66,11 @@ This requires some hardware. Namely a [TTL-232R-3V3](http://cpc.farnell.com/ftdi
 
 Connecting the UART to a PC is pretty easy, a quick connection guide is available:
 
-![UART Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/images/ftdi-ttl-232r-3v3-rpi-connection.png)
+![UART Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/img/bare-metal-programming-in-c/ftdi-ttl-232r-3v3-rpi-connection.png)
 
 Also, a quick photo of one connected up:
 
-![UART Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/images/ftdi-ttl-232r-3v3-rpi-connection-photo.jpg)
+![UART Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/img/bare-metal-programming-in-c/ftdi-ttl-232r-3v3-rpi-connection-photo.jpg)
 
 ### AUX peripheral
 
@@ -297,7 +299,7 @@ Originally this is what I did, and then when I used printf() to test function I 
 
 When you run this tutorials examples with PuTTY, you'll see output similar to this:
 
-![PuTTY RPi Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/images/putty-rpi-connection.png)
+![PuTTY RPi Connection](https://raw.githubusercontent.com/BrianSidebotham/arm-tutorial-rpi/master/part-5/img/bare-metal-programming-in-c/putty-rpi-connection.png)
 
 ### Enabling VFP Support
 

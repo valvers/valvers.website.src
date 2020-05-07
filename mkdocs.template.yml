@@ -14,12 +14,19 @@ google_analytics: ["UA-57476377-1", "valvers.com"]
 
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+          'open-software/raspberry-pi/step01-bare-metal-programming-in-cpt1.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-1.md'
+          'open-software/raspberry-pi/step02-bare-metal-programming-in-c-pt2.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-2.md'
+          'open-software/raspberry-pi/step03-bare-metal-programming-in-c-pt3.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-3.md'
+          'open-software/raspberry-pi/step04-bare-metal-programming-in-c-pt4.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-4.md'
+          'open-software/raspberry-pi/step05-bare-metal-programming-in-c-pt5.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-5.md'
   - minify:
       minify_html: true
-  - git-committers:
-      repository: valvers/valvers.website.src
-      branch: master
-      token: GIT_API_TOKEN
+#  - git-committers:
+#      repository: valvers/valvers.website.src
+#      branch: master
+#      token: GIT_API_TOKEN
 
 extra_css:
     - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css

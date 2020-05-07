@@ -17,6 +17,14 @@ fi
 output_dir="${1}"
 api_token="${2}"
 
+# Firstly, make sure any projects managed outside of the website are kept up-to-date
+${scriptdir}/git-project-importer.py
+
+if [ $? -ne 0 ]; then
+    echo "Could not import the git projects" >&2
+    exit 1
+fi
+
 # Write the configuration to the yaml file
 cp "${scriptdir}/mkdocs.template.yml" "${scriptdir}/mkdocs.yml"
 sed -i "s/GIT_API_TOKEN/${api_token}/" "${scriptdir}/mkdocs.yml"

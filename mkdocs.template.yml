@@ -32,39 +32,55 @@ extra_javascript:
     - valvers-assets/extra.js
 
 markdown_extensions:
-    - admonition
-    - codehilite:
-        guess_lang: false
-    - toc:
-        permalink: true
-    - pymdownx.arithmatex
-    - pymdownx.betterem:
-          smart_enable: all
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.inlinehilite
-    - pymdownx.magiclink
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tilde
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 theme:
     language: en
     custom_dir: valvers-theme
     name: material
     favicon: 'img/favicon.png'
-    logo: 'https://avatars3.githubusercontent.com/u/5575236?v=4?size=32'
+    logo: 'https://www.gravatar.com/avatar/8db3007cd3103d9ff42e90cc95dc7213'
     highlightjs: true
     hljs_languages:
         - python
         - rust
         - yaml
-    palette:
-        primary: Blue Grey
-        accent: Deep Orange
+#    palette:
+#        primary: Blue Grey
+#        accent: Deep Orange
     feature:
         tabs: true

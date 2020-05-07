@@ -1,0 +1,6 @@
+
+git-projects:
+    -
+        url: 'git@github.com:BrianSidebotham/arm-tutorial-rpi.git'
+        name: 'bare-metal-programming-in-c'
+        root: 'open-software/raspberry-pi'

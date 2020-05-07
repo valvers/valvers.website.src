@@ -19,7 +19,7 @@ is an optional personal api access token for the git committers plugin.
 ### Fedora
 
 ```
-python -m pip install mkdocs mkdocs-material mkdocs-git-committers-plugin mkdocs-minify-plugin --user
+python -m pip install mkdocs mkdocs-material mkdocs-git-committers-plugin mkdocs-minify-plugin mkdocs-redirects --user
 ```
 
 This gets you the mkdocs binary installed locally for your user:

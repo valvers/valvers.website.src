@@ -50,10 +50,10 @@ you've got suggestions for more, feel free to get in touch on GitHub/[Brian Side
 ### Bare Metal Tutorials
 
 - [Part 1](/open-software/raspberry-pi/step01-bare-metal-programming-in-cpt1) - Getting Started with Raspberry Pi and bare metal cross-compiling. Blinking an LED.
-- [Part 2](/open-software/raspberry-pi/step02-bare-metal-programming-in-cpt2)
-- [Part 3](/open-software/raspberry-pi/step03-bare-metal-programming-in-cpt3)
-- [Part 4](/open-software/raspberry-pi/step04-bare-metal-programming-in-cpt4)
-- [Part 5](/open-software/raspberry-pi/step05-bare-metal-programming-in-cpt5)
+- [Part 2](/open-software/raspberry-pi/step02-bare-metal-programming-in-c-pt2)
+- [Part 3](/open-software/raspberry-pi/step03-bare-metal-programming-in-c-pt3)
+- [Part 4](/open-software/raspberry-pi/step04-bare-metal-programming-in-c-pt4)
+- [Part 5](/open-software/raspberry-pi/step05-bare-metal-programming-in-c-pt5)
 
 
 ## V6 Manta

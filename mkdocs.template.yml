@@ -23,10 +23,10 @@ plugins:
           'open-software/raspberry-pi/step05-bare-metal-programming-in-c-pt5.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-5.md'
   - minify:
       minify_html: true
-#  - git-committers:
-#      repository: valvers/valvers.website.src
-#      branch: master
-#      token: GIT_API_TOKEN
+  - git-committers:
+      repository: valvers/valvers.website.src
+      branch: master
+      token: GIT_API_TOKEN
 
 extra_css:
     - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css

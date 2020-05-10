@@ -37,13 +37,13 @@ plugins:
 
 extra_css:
     - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
-    - valvers-assets/extra.css
+    - '/valvers-assets/extra.css'
 
 extra_javascript:
     - https://code.jquery.com/jquery-3.4.1.slim.min.js
     - https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
     - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js
-    - valvers-assets/extra.js
+    - '/valvers-assets/extra.js'
 
 markdown_extensions:
   - markdown.extensions.admonition

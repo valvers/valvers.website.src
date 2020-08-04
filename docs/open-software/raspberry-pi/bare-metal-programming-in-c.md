@@ -1,6 +1,7 @@
 # Raspberry-Pi Bare Metal Tutorial
 
-![Build Status](https://travis-ci.org/BrianSidebotham/arm-tutorial-rpi.svg?branch=master)
+![Build Status](https://github.com/BrianSidebotham/arm-tutorial-rpi/workflows/Build/badge.svg)
+![Markdown Status](https://github.com/BrianSidebotham/arm-tutorial-rpi/workflows/Markdown%20Lint/badge.svg)
 
 This repository contains the code for the Raspberry-Pi bare-metal programming
 in C series. The home of the tutorial and all of the articles relating to the
@@ -8,28 +9,46 @@ code is at
 [valvers.com](https://www.valvers.com/open-software/raspberry-pi/bare-metal-programming-in-c)
 and [github](https://github.com/BrianSidebotham/arm-tutorial-rpi)
 
-You can build on linux - because if you're going to develop, you may as well get yourself the ability to use Linux
-whether as a VM on your Windows desktop or as your main desktop.
+The tutorial supports all RPi models, except:
+
+- rpi3 because the ACT LED is not connected to an IO pin
+- rpi4 (Part1-4 only - Part-5 will support RPI4 very soon!)
+
+The tutorial only supports a Linux host for compiling the tutorial code.
+
+## Quickstart
+
+```sh
+git clone git@github.com:BrianSidebotham/arm-tutorial-rpi.git
+cd arm-tutorial-rpi
+```
+
+In order to use the tutorial-supplied compiler:
+
+```sh
+compiler/get_compiler.sh
+```
+
+Get the RPI Firmware that will be required for compiled SD Card images:
+
+```sh
+firmware/get_firmware_repo.sh
+```
 
 > **NOTE**: This tutorial also used to be tested on Windows, but as I don't have any Windows
 installs available any more, or indeed the time available to test everything under Windows it's
 dropped off the list.
 
-## Getting Started
+_Get reading the tutorial. Have fun, and remember to experiment!_
 
-Clone this repository and get the toolchain and firmware.
+## Dependencies
 
-The toolchain used for the tutorial can be fetched by the `compiler/get_compiler.sh` script which will download the
-compiler locally so you don't need to install any specific packages from your Linux distro.
+The tutorial has a few dependencies which you might want to install before you get started:
 
-Similarly, the required Raspberry Pi firmware is also stored locally and can be fetched by using the
-`firmware/get_firmware_repo.sh` script.
+- cmake (Used for configuring Makefiles)
+- mtools (Tools for dealing with file-based FAT32 systems)
 
-Get reading the tutorial.
-
-Have fun, and remember to experiment!
-
-## Tutorial links (online)
+## Tutorial links (Github)
 
 [Step01 - Getting Started](/part-1/readme.md)
 
@@ -41,7 +60,7 @@ Have fun, and remember to experiment!
 
 [Step05 - Graphics(Basic)](/part-5/readme.md)
 
-## Some interesting links:
+## Interesting Links
 
 Original [Cambridge Tutorial](http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/index.html) that
 inspired this tutorial series.

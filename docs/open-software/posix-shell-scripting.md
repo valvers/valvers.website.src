@@ -29,6 +29,62 @@ shell script (which is in `"${0}"`).
 `&& pwd` Once the current working directory has been changed to the script's directory
 we run the `pwd` tool to get the absolute path of the program's working directory.
 
+## Input Arguments
+
+There are many ways to process input arguments for scripts. You can check out the man page for the [getopts](https://www.man7.org/linux/man-pages/man1/getopts.1p.html) command.
+
+I prefer the while loop approach however
+
+### While Loop Arguments
+
+```sh
+while [ $# -gt 0 ]; do
+    case "${1}" in
+        --clean)
+            echo "CLEANING"
+            ;;
+        --verbose|-v)
+            echo "VERBOSE"
+            ;;
+        --file|-f)
+            shift
+            echo "FILE: ${1}"
+            ;;
+    esac
+
+    shift
+done
+```
+
+Some examples of this in use:
+
+```
+[bjs@localhost bin]$ ./collect-static
+```
+```
+[bjs@localhost bin]$ ./collect-static --clean
+CLEANING
+```
+
+```
+[bjs@localhost bin]$ ./collect-static --verbose --clean
+VERBOSE
+CLEANING
+```
+
+```
+[bjs@localhost bin]$ ./collect-static -v --clean
+VERBOSE
+CLEANING
+```
+
+```
+[bjs@localhost bin]$ ./collect-static -v --clean --file hello.txt
+VERBOSE
+CLEANING
+FILE: hello.txt
+```
+
 ## Looping
 Various ways of looping depending on the data set.
 

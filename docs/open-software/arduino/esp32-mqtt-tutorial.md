@@ -12,7 +12,7 @@ Once installed, plug the ESP32 board into a USB port and start the Arduino IDE.
 
 Select `File->Preferences` and then enter `https://dl.espressif.com/dl/package_esp32_index.json` in the `Additional Board Manager URLs` field.
 
-![](/img/open-software/arduino/esp32-mqtt-tutorial/110-wsp32-arduino-ide-set-preferences-to-enable-esp32.png)
+![](/img/open-software/arduino/esp32-mqtt-tutorial/110-esp32-arduino-ide-set-preferences-to-enable-esp32.png)
 
 **Click OK**
 
@@ -29,9 +29,7 @@ Using the search feature, **click Install** for the ESP32 board support.
 > `pip install --upgrade --user pyserial` or else you can get your distribution's packaged version of
 > the python package with something like `sudo dnf install -y python3-pyserial` on Fedora for example.
 
-Select the board (depending on what board you have!). For me, I've been posted this board to work with:
-
-![](/img/open-software/arduino/esp32-mqtt-tutorial/TODO.png)
+Select the board (depending on what board you have!). For me, I've been posted a board to work with.
 
 I've selected the standard `ESP Dev Module` as when I select `Tools->Get Board Info` the board comes back as
 unknown and so cannot be automatically detected as a supported Arduino board.
@@ -93,8 +91,6 @@ same one the board is set to. The BAUD rate might have to be adjusted for your b
 set to the same as your board communications so you get to see all of the output.
 
 Now, when we Upload the sketch to the ESP32, we can see the `Hello World!` output.
-
-![](/img/open-software/arduino/esp32-mqtt-tutorial/160-esp32-arduino-ide-serial-debug.png)
 
 We're done getting set up with Arduino and our board
 

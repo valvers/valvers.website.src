@@ -36,15 +36,18 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Clearing out the old site so we don't get any contamination
-# List everything (except dot files) and discard source files
-# website_files=$(cd "${scriptdir}" && ls -1 | grep -Ev '(^docs$|readme\.md|build\.sh|license|mkdocs\.yml|mkdocsvalvers-theme|valvers-assets)')
-# while read -r f; do
-#     echo "Removing" "${scriptdir}"/"${f}"
-#     cd "${scriptdir}" && rm -rf "${f}"
-# done << EOF
-# ${website_files}
-# EOF
+# Copying material template - this will need adjusting using the diff as a reference to put the
+# valvers specific bits back in...
+cd "${scriptdir}"
+python3 - << EOF
+import material
+import os
+from shutil import copyfile
+copyfile(os.path.join(os.path.dirname(material.__file__), 'base.html'), "${scriptdir}/valvers-theme/base.html")
+EOF
+
+# Insert the required google-site-verification
+sed -i "s/\s<meta charset=\"utf-8\">/<meta charset=\"utf-8\">\n    <meta name=\"google-site-verification\" content=\"gdf4XzjnbaArINbai3d8P0x_W3ugnDeIUyhMuq-wHPs\" \/>/" "${scriptdir}/valvers-theme/base.html"
 
 cd "${scriptdir}" && mkdocs build
 if [ $? -ne 0 ]; then

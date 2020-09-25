@@ -13,7 +13,7 @@ web might be something interesting. Welcome!
     <div class="carousel-item active">
       <img src="/img/arm-tutorial-rpi.jpg" class="d-block w-100" alt="ARM Tutorial">
       <div class="carousel-caption d-none d-md-block bg-light text-dark">
-        <a href="/open-software/raspberry-pi"><h5>Valvers Raspberry Pi Tutorials</h5></a>
+        <a href="/open-software/raspberry-pi/bare-metal-programming-in-c/"><h5>Valvers Raspberry Pi Tutorials</h5></a>
         <p>Learn how to program bare metal C programs for the Raspberry Pi</p>
       </div>
     </div>

@@ -837,4 +837,4 @@ automatic variables won't work, and nor will initialised variables because we ha
 support yet.
 
 That will be where we start with
-[Step 2 of Bare metal programming the Raspberry-Pi](https://www.valvers.com/open-software/raspberry-pi/bare-metal-programming-in-c-part-2)!
+[Step 2 of Bare metal programming the Raspberry-Pi](http://www.valvers.com/embedded-linux/raspberry-pi/step02-bare-metal-programming-in-c-pt2)!

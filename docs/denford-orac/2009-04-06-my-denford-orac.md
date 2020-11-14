@@ -11,4 +11,4 @@ This is the Denford Orac I picked up, exactly as I picked it up! :D
 
 ...and this is the first CNC programmed part it made under its own steam from some free-cutting steel:
 
-![](/img/deford-orac/first_cnc.jpg)
+![](/img/denford-orac/first_cnc.jpg)

@@ -70,9 +70,6 @@ echo -n "www.valvers.com" > ${output_dir}/CNAME
 echo "Installing site to ${output_dir}"
 mv "${scriptdir}"/site/* "${output_dir}"/
 
-# Make the 404.html template full of relative links because it must be served from any location:
-sed -i 's/"assets\//"\/assets\//' "${output_dir}/404.html"
-
 # Make sure we don't publish any source code to the website - don't bother
 # hosting that. All source code should be referenced through github
 rm -rf "${output_dir}"/src

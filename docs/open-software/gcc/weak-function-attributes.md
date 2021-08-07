@@ -1,6 +1,6 @@
 # Weak Function Attributes
 
-In GCC it’s possible to have weak and strong function attributes. Two strongly names functions cannot be present in
+In GCC it’s possible to have weak and strong function attributes. Two strongly named functions cannot be present in
 code objects being linked. This would be an error produced by the linker – it doesn’t know how to resolve two symbols
 with the same name. A simple example of this would be to compile two copies of the same file, which works fine, and
 then try to link them – this will then fail because there are multiple references for the same symbol.

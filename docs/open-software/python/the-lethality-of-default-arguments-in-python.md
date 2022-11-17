@@ -161,7 +161,7 @@ print("1+1 = {}".format(add(1, 1)))
 # 1+1 = 2
 ```
 
-Sticking with None is my typical favourite because we can explicitly test for None in a Pythonic way within the function= with `if values is not None:`. But, this can add more lines of code to the start of our function than the immutable tuple method.
+Sticking with `None` is my typical favourite because we can explicitly test for `None` in a Pythonic way within the function with `if values is not None:`. But, this can add more lines of code to the start of our function than the immutable tuple method.
 
 This whole problem is why you see many libraries starting to move to tuples and/or None as default arguments.
 

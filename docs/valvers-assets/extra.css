@@ -44,3 +44,18 @@ body[dir=rtl] .metadata.page-metadata .contributors-text{
     width:16px
 }
 /* Page Metadata END */
+
+@media only screen and (min-width: 76.25em) {
+    .md-main__inner {
+      max-width: none;
+    }
+    .md-sidebar--primary {
+      left: 0;
+    }
+    .md-sidebar--secondary {
+      right: 0;
+      margin-left: 0;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }

@@ -4,14 +4,68 @@
 site_name: valvers.com
 site_author: 'Brian Sidebotham'
 site_url: 'https://www.valvers.com/'
+site_author: Brian Sidebotham
+site_description: >-
+  Various information about engineering and computing things. Just tid-bits from an enthusiast
+
 copyright: 'Copyright &copy; 2002-2020 Brian Sidebotham'
 
 repo_name: GitHub
 edit_uri: edit/master/docs
 repo_url: https://github.com/valvers/valvers.website.src
 
-google_analytics: ["UA-57476377-1", "valvers.com"]
+# Configuration
+theme:
+  name: material
+  #custom_dir: material/.overrides
+  favicon: 'img/favicon.png'
+  logo: 'https://www.gravatar.com/avatar/8db3007cd3103d9ff42e90cc95dc7213'
+  highlightjs: true
+  hljs_languages:
+    - python
+    - rust
+    - yaml
+  features:
+    # - announce.dismiss
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
 
+# Plugins
 plugins:
   - search
   - redirects:
@@ -30,42 +84,45 @@ plugins:
           'embedded-linux/raspberry-pi/step05-bare-metal-programming-in-c-pt5.md' : 'open-software/raspberry-pi/bare-metal-programming-in-c-part-5.md'
   - minify:
       minify_html: true
-  - git-committers:
-      repository: valvers/valvers.website.src
-      branch: master
-      token: GIT_API_TOKEN
 
-extra_css:
-    - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
-    - '/valvers-assets/extra.css'
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
 
-extra_javascript:
-    - https://code.jquery.com/jquery-3.4.1.slim.min.js
-    - https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
-    - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js
-    - '/valvers-assets/extra.js'
-
+# Extensions
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.attr_list
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
       permalink: true
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
-  - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
-  #     linenums_style: pymdownx-inline
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
@@ -74,27 +131,13 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      check_paths: true
-  - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-theme:
-    language: en
-    custom_dir: valvers-theme
-    name: material
-    favicon: 'img/favicon.png'
-    logo: 'https://www.gravatar.com/avatar/8db3007cd3103d9ff42e90cc95dc7213'
-    highlightjs: true
-    hljs_languages:
-        - python
-        - rust
-        - yaml
-#    palette:
-#        primary: Blue Grey
-#        accent: Deep Orange
-    feature:
-        tabs: true

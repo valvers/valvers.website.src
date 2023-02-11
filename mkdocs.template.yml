@@ -85,6 +85,12 @@ plugins:
   - minify:
       minify_html: true
 
+extra_css:
+  - "valvers-assets/extra.css"
+
+extra_javascript:
+  - "valvers-assets/extra.js"
+
 # Customization
 extra:
   analytics:
